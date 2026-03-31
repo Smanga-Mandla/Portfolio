@@ -50,7 +50,6 @@ export function Hero() {
             </h1>
 
             <div className="relative mb-8 rounded-2xl px-4 py-4">
-              <div className="hidden lg:block absolute inset-0 rounded-2xl bg-center bg-no-repeat bg-[length:58%] opacity-[0.3]" style={{ backgroundImage: "url('/mandla-logo.png')" }}/>
               <div className="hidden lg:block absolute inset-0 rounded-2xl bg-background/55"/>
 
               <p className="relative z-10 text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in-up opacity-0 stagger-3">
