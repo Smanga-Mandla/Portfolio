@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ArrowUpRight, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ArrowUpRight, CheckCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 const contactInfo = [
@@ -16,6 +16,12 @@ const contactInfo = [
         label: "Phone",
         value: "079 037 7217",
         href: "tel:+27790377217",
+    },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      value: "079 037 7217",
+      href: "https://wa.me/27790377217",
     },
     {
         icon: MapPin,

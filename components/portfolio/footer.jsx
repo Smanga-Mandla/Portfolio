@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Phone, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MessageCircle, Heart } from "lucide-react";
 const navLinks = [
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
@@ -60,6 +60,9 @@ export function Footer() {
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary"/>
                 <span>079 037 7217</span>
+                <a href="https://wa.me/27790377217" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors" aria-label="Chat on WhatsApp">
+                  <MessageCircle className="h-4 w-4"/>
+                </a>
               </div>
             </div>
           </div>
