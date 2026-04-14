@@ -9,6 +9,12 @@ const strengths = [
     { icon: Clock, label: "Time Management", description: "Efficient project delivery" },
 ];
 const education = [
+  {
+    degree: "Postgraduate Diploma in ICT",
+    institution: "University of Mpumalanga",
+    year: "2026 - Present",
+    status: "Current",
+  },
     {
         degree: "Advanced Diploma in ICT",
         institution: "University of Mpumalanga",
