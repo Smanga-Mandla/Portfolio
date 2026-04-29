@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ExternalLink, Github, Brain, FileText, Heart, Dumbbell, Database, Globe, Shield, ArrowUpRight } from "lucide-react";
+import { ExternalLink, Github, Brain, FileText, Heart, Dumbbell, Database, Globe, Shield, ArrowUpRight, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const projects = [
     {
@@ -198,6 +198,50 @@ export function Projects() {
                     {tech}
                   </span>))}
               </div>
+            </div>
+          </div>
+
+          {/* Kayise IT Website - Featured Live Project */}
+          <div className={`lg:col-span-2 glass-card rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-all duration-500 hover:border-cyan-500/50`} onMouseEnter={() => setHoveredId(8)} onMouseLeave={() => setHoveredId(null)}>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-sky-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+            
+            <div className="relative z-10">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-3 rounded-xl bg-cyan-500/20 text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                    <Monitor className="h-6 w-6"/>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/20 rounded-full text-xs font-medium text-green-400">
+                    <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"/>
+                    Live
+                  </div>
+                </div>
+                <ArrowUpRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-cyan-400 transition-all duration-300"/>
+              </div>
+              
+              <a href="https://kayiseit.com/" target="_blank" rel="noopener noreferrer" className="group/title">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 group/title-hover:underline transition-colors flex items-center gap-2">
+                  Kayise IT Website
+                  <ExternalLink className="h-4 w-4 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"/>
+                </h3>
+              </a>
+              
+              <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                Professional IT company website featuring an LMS, announcements system, QR code generator, and partner integrations for a South African tech firm.
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["HTML5", "CSS3", "JavaScript", "PHP", "Laravel", "Tailwind CSS"].map((tech, idx) => (
+                  <span key={idx} className="px-2 py-1 text-xs glass rounded-full text-muted-foreground">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <a href="https://kayiseit.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-medium text-cyan-400 hover:text-cyan-300 transition-colors">
+                <ExternalLink className="h-3.5 w-3.5"/>
+                kayiseit.com
+              </a>
             </div>
           </div>
 
