@@ -2,9 +2,8 @@
 import { Building2, Calendar, CheckCircle2, ArrowRight } from "lucide-react";
 const experiences = [
     {
-        title: "Software Developer Intern",
+        title: "Software Developer",
         company: "Kayise IT",
-        period: "Jan 2026 – Present",
         location: "South Africa",
         responsibilities: [
             "Gather and analyze client requirements to define project scope",
@@ -13,7 +12,7 @@ const experiences = [
             "Build AI-powered solutions and train machine learning models",
             "Develop mobile and web applications for diverse clients",
         ],
-        technologies: ["Python", "React", "Node.js", "AI/ML", "Mobile Dev"],
+        technologies: ["PHP", "Python", "React", "Node.js", "AI/ML", "Mobile Dev"],
         current: true,
     },
 ];
@@ -29,7 +28,7 @@ export function Experience() {
             Work <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Building real-world solutions and gaining hands-on experience in professional software development.
+            2 years experience building real-world software solutions in professional environments.
           </p>
         </div>
 
@@ -58,13 +57,6 @@ export function Experience() {
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4"/>
-                      <span>{exp.period}</span>
-                    </div>
-                    {exp.current && (<span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
-                        Current
-                      </span>)}
                   </div>
                 </div>
 

@@ -24,6 +24,8 @@ const skillCategories = [
         skills: [
             { name: "PostgreSQL", level: 85 },
             { name: "MySQL", level: 85 },
+            { name: "MariaDB", level: 80 },
+            { name: "XAMPP", level: 80 },
             { name: "MongoDB", level: 80 },
             { name: "Firebase", level: 80 },
         ],
@@ -40,7 +42,7 @@ const skillCategories = [
 ];
 const allSkills = [
     "HTML", "CSS", "JavaScript", "React", "Python", "Java", "PHP",
-    "PostgreSQL", "Firebase", "MySQL", "MongoDB", "Artificial Intelligence",
+    "PostgreSQL", "Firebase", "MySQL", "MariaDB", "XAMPP", "MongoDB", "Artificial Intelligence",
     "IoT", "REST APIs", "System Design", "SDLC", "Automation", "GitHub",
     "SAP (basic)", "Microsoft Office"
 ];

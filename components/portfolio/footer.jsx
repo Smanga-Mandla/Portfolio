@@ -1,20 +1,14 @@
 "use client";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Phone, MessageCircle, Heart } from "lucide-react";
-const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" },
-];
+import { Github, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
+
 export function Footer() {
     return (<footer className="py-12 border-t border-border/50 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"/>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Brand */}
           <div>
             <Link href="#" className="text-2xl font-bold gradient-text mb-4 block">
@@ -35,16 +29,6 @@ export function Footer() {
                 <Mail className="h-5 w-5"/>
               </Link>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <nav className="flex flex-col gap-2">
-              {navLinks.map((link) => (<Link key={link.href} href={link.href} className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  {link.label}
-                </Link>))}
-            </nav>
           </div>
 
           {/* Contact Info */}

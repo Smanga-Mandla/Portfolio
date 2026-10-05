@@ -137,24 +137,24 @@ export function Contact() {
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Your Name
                   </label>
-                  <Input id="name" type="text" placeholder="John Doe" value={formState.name} onChange={(e) => setFormState({ ...formState, name: e.target.value })} className="bg-background/50 border-border/50 focus:border-primary" required/>
+                  <Input id="name" type="text" value={formState.name} onChange={(e) => setFormState({ ...formState, name: e.target.value })} className="bg-background/50 border-border/50 focus:border-primary" required/>
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email Address
                   </label>
-                  <Input id="email" type="email" placeholder="john@example.com" value={formState.email} onChange={(e) => setFormState({ ...formState, email: e.target.value })} className="bg-background/50 border-border/50 focus:border-primary" required/>
+                  <Input id="email" type="email" value={formState.email} onChange={(e) => setFormState({ ...formState, email: e.target.value })} className="bg-background/50 border-border/50 focus:border-primary" required/>
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message
                   </label>
-                  <textarea id="message" rows={5} placeholder="Tell me about your project..." value={formState.message} onChange={(e) => setFormState({ ...formState, message: e.target.value })} className="w-full px-4 py-3 rounded-lg bg-background/50 border border-border/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none" required/>
+                  <textarea id="message" rows={5} value={formState.message} onChange={(e) => setFormState({ ...formState, message: e.target.value })} className="w-full px-4 py-3 rounded-lg bg-background/50 border border-border/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none" required/>
                 </div>
                 
-                <Button type="submit" size="lg" className="w-full glow">
+                <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm">
                   <Send className="mr-2 h-5 w-5"/>
                   Send Message
                 </Button>

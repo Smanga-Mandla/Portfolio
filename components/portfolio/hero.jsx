@@ -39,11 +39,6 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_20rem] xl:grid-cols-[minmax(0,1fr)_24rem] lg:gap-16">
           {/* Content */}
           <div className="order-2 lg:order-1 w-full max-w-[42rem] text-center lg:max-w-none lg:text-left relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-sm text-primary mb-6 animate-fade-in-up opacity-0 stagger-1">
-              <Sparkles className="h-4 w-4"/>
-              <span>Available for opportunities</span>
-            </div>
-
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 animate-fade-in-up opacity-0 stagger-2 lg:max-w-[16ch]">
               <span className="text-foreground">Hi, I&apos;m </span>
               <span className="text-foreground">Mandla Tivane</span>
@@ -69,7 +64,7 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-8 animate-fade-in-up opacity-0 stagger-5">
-              <Button asChild size="lg" className="glow w-full sm:w-auto">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm w-full sm:w-auto">
                 <Link href="#contact">
                   <Mail className="mr-2 h-5 w-5"/>
                   Contact Me

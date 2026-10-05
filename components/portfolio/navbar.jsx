@@ -21,9 +21,10 @@ export function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (<header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-            ? "glass py-3"
-            : "bg-transparent py-5"}`}>
-      <nav className="container mx-auto px-4 md:px-6 flex items-center justify-end md:justify-between">
+        ? "bg-background/80 backdrop-blur-md border-b border-border/60 shadow-sm py-2"
+        : "bg-background/85 backdrop-blur-md border-b border-border/50 shadow-sm py-3"}`}>
+      <div className="h-10" aria-hidden="true" />
+      <nav className="container mx-auto px-4 md:px-6 flex items-center justify-end md:justify-between absolute inset-x-0 top-0 h-10">
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -41,7 +42,7 @@ export function Navbar() {
           <Link href="https://www.linkedin.com/in/mandla-tivane-7501a6326" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <Linkedin className="h-5 w-5"/>
           </Link>
-          <Button asChild size="sm" className="glow">
+          <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm">
             <Link href="/Mandla-Tivane-CV.pdf" download>
               Download CV
             </Link>
@@ -55,7 +56,7 @@ export function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (<div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border/50 fixed left-0 right-0 top-16 z-40 max-h-96 overflow-y-auto">
+      {isMobileMenuOpen && (<div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border/50 fixed left-0 right-0 top-14 z-40 max-h-96 overflow-y-auto">
           <div className="container mx-auto px-4 py-6 flex flex-col gap-1">
             {navLinks.map((link) => (<Link key={link.href} href={link.href} className="text-foreground hover:text-primary hover:bg-primary/10 px-3 py-3 rounded-lg transition-all font-medium" onClick={() => setIsMobileMenuOpen(false)}>
                 {link.label}
@@ -69,7 +70,7 @@ export function Navbar() {
                   <Linkedin className="h-5 w-5"/>
                 </Link>
               </div>
-              <Button asChild size="sm" className="glow">
+              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm">
                 <Link href="/Mandla-Tivane-CV.pdf" download onClick={() => setIsMobileMenuOpen(false)}>
                   Download CV
                 </Link>
