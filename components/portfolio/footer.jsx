@@ -2,6 +2,11 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
 
+const technologyRows = [
+  ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "HTML & CSS"],
+  ["Python", "Java", "Node.js", "PostgreSQL", "Docker", "AWS"],
+];
+
 export function Footer() {
     return (<footer className="py-12 border-t border-border/50 relative">
       {/* Background gradient */}
@@ -48,6 +53,20 @@ export function Footer() {
                   <MessageCircle className="h-4 w-4"/>
                 </a>
               </div>
+            </div>
+            <div className="mt-8 space-y-3 overflow-hidden" aria-label="Technology stack">
+              {technologyRows.map((technologies, rowIndex) => (
+                <div key={rowIndex} className="technology-marquee-mask">
+                  <div className={`technology-marquee-track ${rowIndex === 1 ? "technology-marquee-reverse" : ""}`}>
+                    {[...technologies, ...technologies].map((technology, index) => (
+                      <span key={`${technology}-${index}`} className="technology-marquee-item">
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary/70" aria-hidden="true" />
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

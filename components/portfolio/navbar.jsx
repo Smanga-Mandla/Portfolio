@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Github, Linkedin } from "lucide-react";
+import { Menu, X, Github, Linkedin, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 const navLinks = [
     { href: "#about", label: "About" },
@@ -13,7 +14,14 @@ const navLinks = [
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+    const isDarkTheme = !isMounted || resolvedTheme === "dark";
+    const themeLabel = isMounted
+      ? isDarkTheme ? "Switch to light mode" : "Switch to dark mode"
+      : "Toggle color theme";
     useEffect(() => {
+    setIsMounted(true);
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         };
@@ -36,6 +44,9 @@ export function Navbar() {
 
         {/* Social Links & CTA */}
         <div className="hidden md:flex items-center gap-4">
+          <button type="button" onClick={() => setTheme(isDarkTheme ? "light" : "dark")} disabled={!isMounted} aria-label={themeLabel} title={themeLabel} className="text-muted-foreground hover:text-primary transition-colors disabled:opacity-50">
+            {isDarkTheme ? <Sun className="h-5 w-5"/> : <Moon className="h-5 w-5"/>}
+          </button>
           <Link href="https://github.com/Smanga-Mandla" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <Github className="h-5 w-5"/>
           </Link>
@@ -63,6 +74,9 @@ export function Navbar() {
               </Link>))}
             <div className="flex items-center justify-between gap-3 pt-5 border-t border-border/30 mt-3 px-3">
               <div className="flex items-center gap-3">
+                <button type="button" onClick={() => setTheme(isDarkTheme ? "light" : "dark")} disabled={!isMounted} aria-label={themeLabel} title={themeLabel} className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors disabled:opacity-50">
+                  {isDarkTheme ? <Sun className="h-5 w-5"/> : <Moon className="h-5 w-5"/>}
+                </button>
                 <Link href="https://github.com/Smanga-Mandla" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors">
                   <Github className="h-5 w-5"/>
                 </Link>
