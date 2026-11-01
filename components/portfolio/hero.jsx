@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Download, Mail, Github, Linkedin, Sparkles } from "lucide-react";
+import { Download, Mail, Github, Linkedin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const roles = [
@@ -110,14 +110,6 @@ export function Hero() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Scroll indicator – desktop only */}
-        <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <Link href="#about" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-            <span className="text-xs">Scroll to explore</span>
-            <ArrowDown className="h-5 w-5"/>
-          </Link>
         </div>
       </div>
     </section>);
