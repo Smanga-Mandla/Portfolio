@@ -28,7 +28,7 @@ export function Experience() {
             Work <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            2 years experience building real-world software solutions in professional environments.
+            1 year of experience building real-world software solutions in professional environments.
           </p>
         </div>
 
