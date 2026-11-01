@@ -130,6 +130,61 @@ export function Projects() {
 
         {/* Bento Grid for Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Featured Project - UMP CFERI Data Reservoir */}
+          <div className={`lg:col-span-2 lg:row-span-2 glass-card rounded-2xl p-8 relative overflow-hidden group cursor-pointer transition-all duration-500 ${projects[7].borderColor}`} onMouseEnter={() => setHoveredId(8)} onMouseLeave={() => setHoveredId(null)}>
+            <div className={`absolute inset-0 bg-gradient-to-br ${projects[7].gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}/>
+
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/20 rounded-full text-xs font-medium text-emerald-400 mb-6">
+                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"/>
+                Featured Project
+              </div>
+
+              <div className={`p-4 rounded-2xl ${projects[7].iconBg} w-fit mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <Database className="h-8 w-8"/>
+              </div>
+
+              <a href={projects[7].repositoryUrl} target="_blank" rel="noopener noreferrer" className="group/title">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-emerald-400 group/title-hover:underline transition-colors flex items-center gap-2">
+                  {projects[7].title}
+                  <ExternalLink className="h-5 w-5 text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity"/>
+                </h3>
+              </a>
+
+              <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                {projects[7].description}
+              </p>
+
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                {projects[7].features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400"/>
+                    {feature}
+                  </div>))}
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {projects[7].technologies.map((tech, idx) => (<span key={idx} className="px-3 py-1 text-xs font-medium glass rounded-full text-foreground border border-border/50">
+                    {tech}
+                  </span>))}
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a href={projects[7].demoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-emerald-500 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-400">
+                  <Play className="h-4 w-4"/>
+                  Live Demo
+                </a>
+                <a href={projects[7].repositoryUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-emerald-500/10">
+                  <Github className="h-4 w-4"/>
+                  View Code
+                </a>
+              </div>
+            </div>
+
+            <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+              <ArrowUpRight className="h-6 w-6 text-emerald-400"/>
+            </div>
+          </div>
+
           {/* Kayise IT Website - Featured Live Project */}
           <div className={`lg:col-span-2 glass-card rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-all duration-500 hover:border-cyan-500/50`} onMouseEnter={() => setHoveredId(8)} onMouseLeave={() => setHoveredId(null)}>
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-sky-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
@@ -300,48 +355,6 @@ export function Projects() {
                 {projects[1].technologies.slice(0, 3).map((tech, idx) => (<span key={idx} className="px-2 py-1 text-xs glass rounded-full text-muted-foreground">
                     {tech}
                   </span>))}
-              </div>
-            </div>
-          </div>
-
-          {/* UMP CFERI Data Reservoir */}
-          <div className={`glass-card rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-all duration-500 ${projects[7].borderColor}`} onMouseEnter={() => setHoveredId(8)} onMouseLeave={() => setHoveredId(null)}>
-            <div className={`absolute inset-0 bg-gradient-to-br ${projects[7].gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}/>
-
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-4">
-                <div className={`p-3 rounded-xl ${projects[7].iconBg} group-hover:scale-110 transition-transform duration-300`}>
-                  <Database className="h-6 w-6"/>
-                </div>
-                <ArrowUpRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-emerald-400 transition-all duration-300"/>
-              </div>
-
-              <a href={projects[7].repositoryUrl} target="_blank" rel="noopener noreferrer" className="group/title">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-emerald-400 group/title-hover:underline transition-colors flex items-center gap-2">
-                  {projects[7].title}
-                  <ExternalLink className="h-4 w-4 text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity"/>
-                </h3>
-              </a>
-
-              <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                {projects[7].description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {projects[7].technologies.slice(0, 3).map((tech, idx) => (<span key={idx} className="px-2 py-1 text-xs glass rounded-full text-muted-foreground">
-                    {tech}
-                  </span>))}
-              </div>
-
-              <div className="flex gap-3">
-                <a href={projects[7].demoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors">
-                  <Play className="h-4 w-4"/>
-                  Live Demo
-                </a>
-                <a href={projects[7].repositoryUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                  <Github className="h-4 w-4"/>
-                  Source
-                </a>
               </div>
             </div>
           </div>
