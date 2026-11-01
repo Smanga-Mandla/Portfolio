@@ -94,6 +94,20 @@ const projects = [
         featured: false,
         size: "small",
     },
+    {
+        id: 8,
+        title: "UMP CFERI Data Reservoir",
+        description: "Secure Django data platform for managing CFERI compliance records, partners, stakeholders, incubation programmes, reporting, and audit trails.",
+        icon: Database,
+        technologies: ["Python", "Django", "PostgreSQL", "Celery"],
+        features: ["Document Vault", "Role-Based Access", "Reporting", "Audit Trails"],
+        gradient: "from-emerald-500/20 via-teal-500/20 to-cyan-500/20",
+        borderColor: "hover:border-emerald-500/50",
+        iconBg: "bg-emerald-500/20 text-emerald-400",
+        featured: false,
+        size: "medium",
+        repositoryUrl: "https://github.com/Smanga-Mandla/UmpCferi--Data-Reservoir",
+    },
 ];
 export function Projects() {
     const [hoveredId, setHoveredId] = useState(null);
@@ -283,6 +297,37 @@ export function Projects() {
               
               <div className="flex flex-wrap gap-2">
                 {projects[1].technologies.slice(0, 3).map((tech, idx) => (<span key={idx} className="px-2 py-1 text-xs glass rounded-full text-muted-foreground">
+                    {tech}
+                  </span>))}
+              </div>
+            </div>
+          </div>
+
+          {/* UMP CFERI Data Reservoir */}
+          <div className={`glass-card rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-all duration-500 ${projects[7].borderColor}`} onMouseEnter={() => setHoveredId(8)} onMouseLeave={() => setHoveredId(null)}>
+            <div className={`absolute inset-0 bg-gradient-to-br ${projects[7].gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}/>
+
+            <div className="relative z-10">
+              <div className="flex items-start justify-between mb-4">
+                <div className={`p-3 rounded-xl ${projects[7].iconBg} group-hover:scale-110 transition-transform duration-300`}>
+                  <Database className="h-6 w-6"/>
+                </div>
+                <ArrowUpRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-emerald-400 transition-all duration-300"/>
+              </div>
+
+              <a href={projects[7].repositoryUrl} target="_blank" rel="noopener noreferrer" className="group/title">
+                <h3 className="text-lg font-bold mb-2 group-hover:text-emerald-400 group/title-hover:underline transition-colors flex items-center gap-2">
+                  {projects[7].title}
+                  <ExternalLink className="h-4 w-4 text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity"/>
+                </h3>
+              </a>
+
+              <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                {projects[7].description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {projects[7].technologies.slice(0, 3).map((tech, idx) => (<span key={idx} className="px-2 py-1 text-xs glass rounded-full text-muted-foreground">
                     {tech}
                   </span>))}
               </div>
