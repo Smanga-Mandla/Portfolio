@@ -24,7 +24,7 @@ export function Hero() {
     return () => clearInterval(intervalId);
   }, []);
 
-    return (<section className="relative min-h-screen md:min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
+    return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient effects – desktop only */}
       <div className="hidden lg:block absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"/>
@@ -39,9 +39,14 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_20rem] xl:grid-cols-[minmax(0,1fr)_24rem] lg:gap-16">
           {/* Content */}
           <div className="order-2 lg:order-1 w-full max-w-[42rem] text-center lg:max-w-none lg:text-left relative z-10">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 animate-fade-in-up opacity-0 stagger-2 lg:max-w-[16ch]">
-              <span className="text-foreground">Hi, I&apos;m </span>
-              <span className="text-foreground">Mandla Tivane</span>
+            <h1 className="mb-8 text-foreground animate-fade-in-up opacity-0 stagger-2">
+              <span className="mb-2 block text-xl font-medium tracking-[0.08em] text-muted-foreground sm:text-2xl md:text-3xl">
+                Hi, I&apos;m
+              </span>
+              <span className="gradient-text relative block w-fit whitespace-nowrap text-3xl font-extrabold leading-[1.05] tracking-[-0.04em] sm:text-5xl md:text-6xl">
+                Mandla Tivane
+                <span className="absolute -bottom-3 left-0 h-1 w-16 rounded-full bg-gradient-to-r from-primary to-accent sm:w-20" aria-hidden="true"/>
+              </span>
             </h1>
 
             <div className="relative mb-8 rounded-2xl px-4 py-4">
