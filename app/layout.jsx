@@ -21,7 +21,7 @@ export const metadata = {
         type: 'website',
     },
     icons: {
-        icon: '/mandla-logo.png',
+        icon: '/icon.svg',
         apple: '/apple-icon.png',
     },
 };
