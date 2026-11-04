@@ -45,11 +45,8 @@ export function About() {
               </div>
               <h3 className="text-xl font-semibold">Professional Summary</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
-              ICT graduate with a strong foundation in software development, software engineering, 
-              web development, and system design. Passionate about Artificial Intelligence and 
-              building solutions that automate processes and solve real-world problems. 
-              Experienced in Agile environments and developing scalable, efficient systems.
+            <p className="text-muted-foreground leading-relaxed text-justify">
+              ICT graduate with an Advanced Diploma in Information and Communication Technology and one year of experience as a Software Developer at Kayise IT. I take part in every phase of the software development lifecycle, from requirements and prototyping through design, development, testing, release and maintenance of secure, database-driven web-based business systems. I am comfortable working with relational databases, REST APIs and Git, and I enjoy writing clean, reusable code, learning from senior developers and improving how software gets built. I communicate clearly with clients and teammates and handle enquiries professionally.
             </p>
           </div>
 
