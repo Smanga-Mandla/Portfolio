@@ -39,11 +39,6 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_20rem] xl:grid-cols-[minmax(0,1fr)_24rem] lg:gap-16">
           {/* Content */}
           <div className="order-2 lg:order-1 w-full max-w-[42rem] text-center lg:max-w-none lg:text-left relative z-10">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 animate-fade-in-up opacity-0 stagger-2 lg:max-w-[16ch]">
-              <span className="text-foreground">Hi, I&apos;m </span>
-              <span className="text-foreground">Mandla Tivane</span>
-            </h1>
-
             <div className="relative mb-8 rounded-2xl px-4 py-4">
               <div className="hidden lg:block absolute inset-0 rounded-2xl bg-background/55"/>
 
